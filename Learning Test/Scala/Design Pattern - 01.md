@@ -37,6 +37,7 @@ object Example extends App {
   setStubResponse(gateway, 2L, Some(sms))
 }
 ```
+호출 구조는 다음과 같다.
 - setStubResponse(gateway, 1L, Some(email))
 ```
 setStubResponse(gateway, 1L, Some(email))setStubResponse(gateway, 2L, Some(sms))Some(email)
@@ -62,7 +63,7 @@ generator.set(...)
 gateway.setSmsResponse(...)
 ```
 
-## smsSetter는 익명 객체로 SAM으로 정의된 StubResponseGenerator[A] 트레이트를 구현한 객체이다.
+smsSetter는 익명 객체로 SAM으로 정의된 StubResponseGenerator[A] 트레이트를 구현한 객체이다.
 - Scala Code
 ```scala
 implicit val smsSetter: StubResponseGenerator[SmsNotification] =
