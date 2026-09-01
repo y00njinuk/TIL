@@ -93,6 +93,6 @@ new StubResponseGenerator[SmsNotification] {
 - 적용 위치: 각 implicit val의 람다 본문과 setStubResponse 내부의 generator.set(...).
 
 ### Implicit Dependency Injection
-- setStubResponse[A](...)(implicit generator: StubResponseGenerator[A])에서 setter를 외부에서 직접 전달받지 않습니다.
+- setStubResponse\[A\](...)(implicit generator: StubResponseGenerator[A])에서 setter를 외부에서 직접 전달받지 않습니다.
 - 호출 시 A 타입에 맞는 emailSetter 또는 smsSetter를 컴파일러가 자동으로 주입합니다.
 - 적용 위치: setStubResponse의 implicit 파라미터와 setStubResponse(gateway, ..., Some(email/sms)) 호출부.
